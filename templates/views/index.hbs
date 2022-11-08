@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-color: lightblue;
+    }
+  </style>
+  <title>IGNOU Study Center</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- HTML -->
+  <script src="https://code.jquery.com/jquery-migrate-3.3.2.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <link rel="php.php" href="php.php" title="" type="" />
+  <div style="border:2px solid blue;
+background-color: linen;
+margin-top: 0.1px;
+">
+    <h1 style="color:deepskyblue;
+  
+  ">Registration Form</h1>
+  </div>
+  <div style="
+background-color: lightcyan;">
+    <div>
+      <button Class="button">Menu</button>
+      <div class="Siid">
+        <a href="https://sidhelpbot.github.io/Sidsecond/" target=_blank>
+          <div class="Slidee">
+            <br />
+            Home
+          </div>
+        </a>
+        <div class="Slidee"><a href="/login">Login</a>
+          </div>
+        <div class="Slidee">
+          WebPage
+        </div>
+      </div><br />
+           <form action="/register" method="post">
+        <table>
+          <tr>
+            <td>
+              Name
+            </td>
+            <td>
+              <input type='text' name="name" placeholder="Name" style="color: darkblue">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Phone Number
+            </td>
+            <td>
+              <input type='text' name="phone" placeholder="123456****">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              E-mail ID
+            </td>
+            <td>
+              <input type='email' name="email" placeholder="mynm***@*mail.com">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              password
+            </td>
+            <td>
+              <input type="password" placeholder="password" name="password" id="Sid" />
+            </td>
+
+          </tr>
+          <tr>
+            <td>
+              Gender
+            </td>
+            <td>
+
+              <input type='radio' name="gender" id="rt" value="Male">Male
+              <input type='radio' name="gender" id="rt" value="Female">FeMale
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              address
+            </td>
+            <td>
+              <textarea rows="4" col="100" name="address" placeholder="address" style="color:blue">
+             </textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type='submit' ></input>
+            </td>
+            <td>
+              <input type="reset" value="Reset">
+            </td>
+          </tr>
+        </table>
+
+      </form>
+    </div>
+
+    <link rel="stylesheet" href="" title="" type="">
+    <h2>Leave Us a Comment</h2>
+    <form>
+      <textarea placeholder='Add Your Comment'></textarea>
+      <div class="btn">
+        <input type="submit" value='Comment'>
+        <button id='clear'>Cancel</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    var feild = document.querySelector('textarea');
+    var backUp = feild.getAttribute('placeholder');
+    var btn = document.querySelector('.btn');
+    var clear = document.getElementById('clear')
+
+    feild.onfocus = function () {
+      this.setAttribute('placeholder', '');
+      this.style.borderColor = '#333';
+      btn.style.display = 'block'
+    }
+
+    feild.onblur = function () {
+      this.setAttribute('placeholder', backUp);
+      this.style.borderColor = '#aaa'
+    }
+    clear.onclick = function () {
+      btn.style.display = 'none';
+      feild.value = '';
+    }
+  </script>
+  <script src="main.js"></script>
+</body>
+
+</html>

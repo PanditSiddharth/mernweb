@@ -1,0 +1,16 @@
+<html></html>
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const mongoose = require('mongoose');
+const mongoDB = "mongodb://localhost:27017/sidDB";
+
+mongoose.connect(mongoDB, (err)=>
+{if (err) console.log(`Unable to connect to the server ${err}`);
+else console.log("mongodb is connected")
+});
+
+app.listen(5000, ()=>{
+    console.log(`Server listening on port ${port}`);
+})
+<head>
