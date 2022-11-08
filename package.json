@@ -1,4 +1,5 @@
 {
+  "homepage": "https://sidhelpbot.github.io/mernweb/",
   "name": "web3",
   "version": "1.0.0",
   "description": "",
@@ -16,6 +17,7 @@
     "braces": "^3.0.2",
     "bson": "^4.7.0",
     "buffer": "^5.7.1",
+    "build": "^0.1.4",
     "bytes": "^3.1.2",
     "call-bind": "^1.0.2",
     "chokidar": "^3.5.3",
@@ -119,13 +121,20 @@
     "vary": "^1.1.2",
     "walk": "^2.3.15",
     "webidl-conversions": "^7.0.0",
+    "webpack": "^5.74.0",
     "whatwg-url": "^11.0.0",
     "wordwrap": "^1.0.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/index.js -e js, hbs"
+    "dev": "nodemon src/index.js -e js, hbs",
+    "build": "webpack --config src/index.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "^4.10.0"
+  }
 }
